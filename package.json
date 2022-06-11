@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-es6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "andrew.roztor99@gmail.com",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/index",
+    "start": "yarn run clean && yarn run transpile",
+    "transpile": "babel ./src --out-dir dist",
+    "clean": "rm -rf ./dist"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.18.2",
+    "babel-node": "^0.0.1-security",
+    "nodemon": "^2.0.16"
+  }
+}
